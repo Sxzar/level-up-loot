@@ -1,0 +1,29 @@
+.lul__navbar {
+    background-color: var(--background-color-nav);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+}
+
+.lul__navar-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lul__navbar-elements_logo img {
+    max-width: 300px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+    .lul__navbar-elements_logo img {
+        max-height: 80px;
+    }
+    .lul__navbar {
+        padding: 0 1rem;
+    }
+}

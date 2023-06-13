@@ -6,5 +6,51 @@
 }
 
 body {
-    background-color: var(--color-bg);
+    background-color: var(--background-color);
+    font-size: 1rem;
+    font-family: var(--font-family);
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.secondary-text {
+    font-size: 0.75rem;
+}
+
+.input-text {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.section__padding {
+    padding: 2rem;
+}
+
+.section__margin {
+    margin: 2rem;
+}
+
+.app__body {
+    display: flex;
+    flex-direction: row;
 }

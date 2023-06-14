@@ -1,0 +1,15 @@
+.lul__sideNav {
+    width: 200px;
+    background-color: var(--background-color-nav);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    height: calc(100vh - 100px);
+}
+
+@media screen and (max-width: 768px) {
+    .lul__sideNav {
+        display: none;
+    }
+}

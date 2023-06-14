@@ -6,9 +6,3 @@
     box-shadow: var(--box-shadow);
     background-color: var(--bakground-color-1);
 }
-
-@media screen and (max-width: 768px) {
-    .lul__cta {
-        display: none;
-    }
-}

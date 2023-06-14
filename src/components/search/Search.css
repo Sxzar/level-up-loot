@@ -1,5 +1,4 @@
 .lul__search {
-    margin-left: 3rem;
     position: relative;
 }
 
@@ -41,10 +40,4 @@
     border-radius: 50%;
     padding: 0.5rem;
     cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    .lul__search {
-        display: none;
-    }
 }

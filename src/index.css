@@ -10,8 +10,15 @@
     );
     --radial-gradient: radial-gradient(
         67.97% 67.97% at 49.89% 50%,
-        #b0a8ff 0%,
+        rgba(176, 168, 255, 0) 0%,
         #5800ff 100%
+    );
+
+    --white-radial-gradient: linear-gradient(
+        98.69deg,
+        #e4e4e4 19.55%,
+        rgba(255, 180, 180, 0.598958) 50.4%,
+        rgba(255, 255, 255, 0) 96.48%
     );
 
     --background-color: #f6f6f6;

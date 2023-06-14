@@ -1,0 +1,27 @@
+.lul__heroBanner {
+    margin-top: 20px;
+    width: 50%;
+    height: 360px;
+    background-color: var(--bakground-color-1);
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    position: relative;
+    min-width: 768px;
+}
+
+.lul__heroBanner-content {
+    width: 62%;
+    min-width: 470px;
+    position: relative;
+    z-index: 2;
+    color: var(--primary-text-color);
+    background: var(--radial-gradient);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+}
+
+.lul__heroBanner img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}

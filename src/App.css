@@ -32,6 +32,9 @@ h4 {
     font-size: 1.25rem;
     font-weight: 500;
 }
+.full-width {
+    width: 100%;
+}
 
 .secondary-text {
     font-size: 0.75rem;

@@ -1,0 +1,23 @@
+.lul__glassButton {
+    margin-top: 40px;
+}
+.lul__glassButton-btn {
+    background: var(--glass-gradient);
+    padding: 0.8rem 2.4rem;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    backdrop-filter: blur(20px);
+    font-weight: 700;
+}
+.lul__glassButton-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: var(--white-radial-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}

@@ -20,7 +20,7 @@ const MobileMenu = () => {
             <div
                 className={
                     open
-                        ? "lul__mobileMenu-navigation expanded"
+                        ? "lul__mobileMenu-navigation scale-up-ver-top expanded"
                         : "lul__mobileMenu-navigation"
                 }
             >

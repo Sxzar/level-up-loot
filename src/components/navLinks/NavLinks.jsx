@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./NavLinks.css";
 
 const NavLinks = () => {
@@ -6,19 +7,19 @@ const NavLinks = () => {
         <div className="lul__navLinks">
             <ul>
                 <li>
-                    <a href="/">Home </a>
+                    <Link to="/">Home </Link>
                 </li>
 
                 <li>
-                    <a href="/deals">Deals</a>
+                    <Link to="/deals">Deals</Link>
                 </li>
 
                 <li>
-                    <a href="/news">News</a>
+                    <Link to="/news">News</Link>
                 </li>
 
                 <li>
-                    <a href="/freeGames">Free</a>
+                    <Link to="/freeGames">Free</Link>
                 </li>
             </ul>
         </div>

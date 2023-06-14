@@ -1,7 +1,8 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { SideNav, TopNav } from "./components";
-import { ScreenContainer } from "./containers";
+import { SideNav, TopNav } from "./containers";
+import { Home } from "./pages";
 
 const App = () => {
     return (
@@ -9,7 +10,9 @@ const App = () => {
             <TopNav />
             <div className="app__body">
                 <SideNav />
-                <ScreenContainer />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
             </div>
         </div>
     );

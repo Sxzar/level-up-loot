@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLinks } from "../";
+import { NavLinks } from "../../components";
 import "./SideNav.css";
 
 const SideNav = () => {

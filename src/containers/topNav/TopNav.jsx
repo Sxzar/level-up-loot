@@ -1,7 +1,8 @@
 import React from "react";
-import { Cta, MobileMenu, Search } from "../";
 import logoLarge from "../../assets/img/logo-large.svg";
 import logoSmall from "../../assets/img/logo-small.svg";
+import { Link } from "react-router-dom";
+import { Cta, MobileMenu, Search } from "../../components";
 import "./TopNav.css";
 
 const TopNav = () => {
@@ -9,7 +10,7 @@ const TopNav = () => {
         <div className="lul__navbar">
             <div className="lul__navar-elements">
                 <div className="lul__navbar-elements_logo">
-                    <a href="/">
+                    <Link to="/">
                         <picture>
                             <source
                                 media="(max-width:1000px)"
@@ -17,7 +18,7 @@ const TopNav = () => {
                             />
                             <img src={logoLarge} alt="logo" />
                         </picture>
-                    </a>
+                    </Link>
                 </div>
                 <Search />
             </div>

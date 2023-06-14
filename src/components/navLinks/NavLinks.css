@@ -1,0 +1,53 @@
+.lul__navLinks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lul__navLinks ul li a {
+    color: var(--secondary-text-color);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.lul__navLinks ul li a:hover {
+    color: var(--bakground-color-1);
+}
+
+.lul__navLinks ul li {
+    margin: 2rem 0;
+}
+
+.lul__navLinks ul li:first-child a::before {
+    background-image: url("../../assets/img/home-icon.svg");
+}
+.lul__navLinks ul li:nth-child(2) a::before {
+    background-image: url("../../assets/img/deals-icon.svg");
+}
+.lul__navLinks ul li:nth-child(3) a::before {
+    background-image: url("../../assets/img/free-games-icon.svg");
+}
+.lul__navLinks ul li:last-child a::before {
+    background-image: url("../../assets/img/news-icon.svg");
+}
+
+.lul__navLinks ul li a::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 0.5rem;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .lul__navLinks ul li a::before {
+        width: 40px;
+        height: 40px;
+    }
+    .lul__navLinks ul li a {
+        font-size: 1.2rem;
+    }
+}

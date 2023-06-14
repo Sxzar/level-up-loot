@@ -1,0 +1,47 @@
+.lul__mobileMenu {
+    display: none;
+}
+
+.lul__mobileMenu-button {
+    width: 40px;
+    height: 40px;
+    background-image: url("../../assets/img/bars-solid.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.lul__mobileMenu-button.open {
+    background-image: url("../../assets/img/xmark-solid.svg");
+}
+
+.lul__mobileMenu-navigation {
+    display: none;
+    position: absolute;
+    top: 100px;
+    height: calc(100vh - 100px);
+    width: 100%;
+    left: 0;
+    background-color: var(--background-color-nav);
+    z-index: 2;
+}
+
+.lul__mobileMenu-navigation.expanded {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.lul__mobileMenu-navigation > .lul__navLinks {
+    margin-left: -40px;
+}
+
+@media screen and (max-width: 768px) {
+    .lul__mobileMenu {
+        display: block;
+    }
+}

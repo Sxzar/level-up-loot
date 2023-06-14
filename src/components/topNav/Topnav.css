@@ -21,9 +21,23 @@
 
 @media screen and (max-width: 1000px) {
     .lul__navbar-elements_logo img {
-        max-height: 80px;
+        margin-top: 10px;
+        max-height: 60px;
     }
     .lul__navbar {
         padding: 0 1rem;
+    }
+}
+
+.lul__navar-elements > .lul__search {
+    margin-left: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+    .lul__navar-elements > .lul__search {
+        display: none;
+    }
+    .lul__navbar > .lul__cta {
+        display: none;
     }
 }

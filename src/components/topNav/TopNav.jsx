@@ -1,8 +1,7 @@
 import React from "react";
+import { Cta, MobileMenu, Search } from "../";
 import logoLarge from "../../assets/img/logo-large.svg";
 import logoSmall from "../../assets/img/logo-small.svg";
-import Cta from "../cta/Cta";
-import Search from "../search/Search";
 import "./TopNav.css";
 
 const TopNav = () => {
@@ -23,6 +22,7 @@ const TopNav = () => {
                 <Search />
             </div>
             <Cta />
+            <MobileMenu />
         </div>
     );
 };

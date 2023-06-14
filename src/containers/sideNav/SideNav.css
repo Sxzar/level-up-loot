@@ -1,5 +1,5 @@
 .lul__sideNav {
-    width: 200px;
+    min-width: 200px;
     background-color: var(--background-color-nav);
     display: flex;
     flex-direction: column;

@@ -1,0 +1,12 @@
+.lul__heroGames {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lul__heroGames-game img {
+    width: 100%;
+    object-fit: cover;
+    height: 360px;
+    border-radius: 20px;
+}

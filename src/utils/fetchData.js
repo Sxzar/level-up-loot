@@ -25,8 +25,7 @@ export const epicGamesOptions = {
     method: "GET",
     headers: {
         "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
-        "X-RapidAPI-Host":
-            "https://epic-free-games.p.rapidapi.com/epic-free-games",
+        "X-RapidAPI-Host": "epic-free-games.p.rapidapi.com",
     },
 };
 

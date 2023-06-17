@@ -8,7 +8,7 @@ export const gameDealsOptions = {
     method: "GET",
     headers: {
         "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
-        "X-RapidAPI-Host": "https://cheapshark-game-deals.p.rapidapi.com/deals",
+        "X-RapidAPI-Host": "cheapshark-game-deals.p.rapidapi.com",
     },
 };
 
@@ -16,8 +16,7 @@ export const freeGamesOptions = {
     method: "GET",
     headers: {
         "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
-        "X-RapidAPI-Host":
-            "https://free-to-play-games-database.p.rapidapi.com/api/filter",
+        "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
     },
 };
 
@@ -33,7 +32,7 @@ export const bingNewsOptions = {
     method: "GET",
     headers: {
         "X-RapidAPI-Key": process.env.REACT_APP_RAPID_API_KEY,
-        "X-RapidAPI-Host": "https://bing-news-search1.p.rapidapi.com/news",
+        "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
     },
 };
 

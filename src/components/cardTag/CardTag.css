@@ -1,0 +1,27 @@
+.lul__tag {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 130px;
+    height: 130px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    pointer-events: none;
+}
+
+.lul__tag-inner {
+    position: relative;
+    display: block;
+    left: -15px;
+    top: 30px;
+    width: 200px;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    background: #FFBE10;
+    transform: rotate(45deg) translate3d(0,0,0);
+}

@@ -1,5 +1,5 @@
 .lul__glassButton {
-    margin-top: 40px;
+    padding-top: 25px;
 }
 .lul__glassButton-btn {
     background: var(--glass-gradient);
@@ -8,6 +8,9 @@
     box-shadow: var(--box-shadow);
     backdrop-filter: blur(20px);
     font-weight: 700;
+    display: block;
+    width: fit-content;
+    color: var(--primary-text-color);
 }
 .lul__glassButton-btn::before {
     content: "";

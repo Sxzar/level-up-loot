@@ -58,6 +58,11 @@ h4 {
     flex-direction: row;
 }
 
+.lul__home-container {
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+}
+
 /**
  * ----------------------------------------
  * animation scale-up-ver-top

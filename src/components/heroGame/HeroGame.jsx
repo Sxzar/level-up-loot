@@ -9,21 +9,26 @@ const HeroGame = () => {
 
     useEffect(() => {
         const fetchHeroGamesData = async () => {
-            const endpoint1 = "https://epic-free-games.p.rapidapi.com/epic-free-games";
-            const endpoint2 = "https://epic-free-games.p.rapidapi.com/epic-free-games-coming-soon";
+            const endpoint1 =
+                "https://epic-free-games.p.rapidapi.com/epic-free-games";
+            const endpoint2 =
+                "https://epic-free-games.p.rapidapi.com/epic-free-games-coming-soon";
 
             try {
                 const response1 = await fetchData(endpoint1, epicGamesOptions);
-                
+
                 if (response1.length > 0) {
                     setGame(response1);
                     setSectionTitle("Get it now");
                 } else {
-                    const response2 = await fetchData(endpoint2, epicGamesOptions);
+                    const response2 = await fetchData(
+                        endpoint2,
+                        epicGamesOptions
+                    );
                     setGame(response2);
                 }
             } catch (error) {
-                console.log('Error fetching data: ', error);
+                console.log("Error fetching data: ", error);
             }
         };
         fetchHeroGamesData();
@@ -53,19 +58,22 @@ const HeroGame = () => {
     return (
         <div className="lul__heroGames">
             {game.length ? (
-                    <div className="lul__heroGames-game">
-                        <a href={game[currentIndex].appUrl} target="_blank" rel="noreferrer noopener">
-                            <img
-                                src={game[currentIndex].offerImageWide}
-                                alt={game[currentIndex].name}
-                            />
-                            <CardTag title="Free"></CardTag>
-                            <div className="lul__heroGame-sectionTitle">
-                                <span>{sectionTitle}</span>
-                            </div>
-                        </a>
-                    </div>
-               
+                <div className="lul__heroGames-game">
+                    <a
+                        href={game[currentIndex].appUrl}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                    >
+                        <img
+                            src={game[currentIndex].offerImageWide}
+                            alt={game[currentIndex].name}
+                        />
+                        <CardTag title="Free"></CardTag>
+                        <div className="lul__heroGame-sectionTitle">
+                            <span>{sectionTitle}</span>
+                        </div>
+                    </a>
+                </div>
             ) : (
                 <Loader />
             )}

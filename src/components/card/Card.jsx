@@ -14,7 +14,11 @@ const Card = (props) => {
                     className="lul__card-info__button"
                 >
                     <div className="lul__card-image">
-                        <img src={game.thumbnail} alt={game.title} />
+                        <img
+                            src={game.thumbnail ? game.thumbnail : game.thumb}
+                            alt={game.title}
+                            loading="lazy"
+                        />
                     </div>
                 </Link>
                 <div className="lul__card-info">

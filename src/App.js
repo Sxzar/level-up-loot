@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { SideNav, TopNav } from "./containers";
-import { Home } from "./pages";
+import { Home, SearchResults } from "./pages";
 
 const App = () => {
     return (
@@ -12,6 +12,7 @@ const App = () => {
                 <SideNav />
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/search-results" element={<SearchResults />} />
                 </Routes>
             </div>
         </div>

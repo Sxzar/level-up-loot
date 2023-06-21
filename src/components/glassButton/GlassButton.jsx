@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./GlassButton.css";
 
-const GlassButton = (props) => {
+const GlassButton = ({ action, content }) => {
     return (
         <div className="lul__glassButton">
-            <Link to={props.action} className="lul__glassButton-btn">
-                {props.content}
+            <Link to={action} className="lul__glassButton-btn">
+                {content}
             </Link>
         </div>
     );

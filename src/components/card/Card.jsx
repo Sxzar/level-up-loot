@@ -17,7 +17,11 @@ const Card = ({ data, color }) => {
         <div className="lul__card" style={{ backgroundColor: color }}>
             <div className="lul__card-wrapper">
                 <Link
-                    to={`/game/${game.id}`}
+                    to={
+                        game.dealID
+                            ? `/game?${game.dealID}`
+                            : `/game?${game.id}`
+                    }
                     className="lul__card-info__button"
                 >
                     <div className="lul__card-image">
@@ -36,6 +40,11 @@ const Card = ({ data, color }) => {
                 <div className="lul__card-info">
                     <h3 className="lul__card-info__title">{game.title}</h3>
                     <GlassButton
+                        action={
+                            game.dealID
+                                ? `/game?${game.dealID}`
+                                : `/game?${game.id}`
+                        }
                         content={
                             game.dealID
                                 ? parseInt(game.salePrice) !== 0

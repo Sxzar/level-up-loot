@@ -34,6 +34,10 @@
     font-weight: 700;
     color: var(--primary-text-color);
     text-align: center;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .lul__card-info__button {
     position: relative;

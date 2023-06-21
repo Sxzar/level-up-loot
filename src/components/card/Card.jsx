@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import { GlassButton, Loader } from "../";
 import "./Card.css";
 
-const Card = (props) => {
-    const game = props.data;
+const Card = ({ data, color }) => {
+    const game = data;
     if (!game) return <Loader />;
     return (
-        <div className="lul__card" style={{ backgroundColor: props.color }}>
+        <div className="lul__card" style={{ backgroundColor: color }}>
             <div className="lul__card-wrapper">
                 <Link
                     to={`/game/${game.id}`}

@@ -4,6 +4,7 @@ export { default as Cta } from "./cta/Cta";
 export { default as GlassButton } from "./glassButton/GlassButton";
 export { default as HeroBanner } from "./heroBanner/HeroBanner";
 export { default as HeroGame } from "./heroGame/HeroGame";
+export { default as HorizontalScrollbar } from "./horizontalScrollbar/HorizontalScrollbar";
 export { default as Loader } from "./loader/Loader";
 export { default as MobileMenu } from "./mobileMenu/MobileMenu";
 export { default as NavLinks } from "./navLinks/NavLinks";

@@ -46,14 +46,16 @@ const SearchResults = () => {
     }, [search]);
 
     return (
-        <div className="lul__searchResults">
-            {games.map((game, index) => (
-                <Card
-                    key={index}
-                    data={game}
-                    color={cardColors[index % cardColors.length]}
-                />
-            ))}
+        <div className="lul__home-container full-width">
+            <div className="lul__searchResults  ">
+                {games.map((game, index) => (
+                    <Card
+                        key={index}
+                        data={game}
+                        color={cardColors[index % cardColors.length]}
+                    />
+                ))}
+            </div>
         </div>
     );
 };

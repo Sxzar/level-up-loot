@@ -11,15 +11,15 @@ const NavLinks = () => {
                 </li>
 
                 <li>
+                    <Link to="/freeGames">Free</Link>
+                </li>
+
+                <li>
                     <Link to="/deals">Deals</Link>
                 </li>
 
                 <li>
                     <Link to="/news">News</Link>
-                </li>
-
-                <li>
-                    <Link to="/freeGames">Free</Link>
                 </li>
             </ul>
         </div>

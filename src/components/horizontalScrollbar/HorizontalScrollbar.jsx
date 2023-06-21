@@ -11,7 +11,7 @@ const HorizontalScrollbar = ({ data }) => {
     const cardColors = ["#F35826", "#877BF5", "#66C8FF", "#FFBE10"];
 
     // Horizontal scrollbar settings
-    var settings = {
+    let settings = {
         arrows: true,
         infinite: false,
         speed: 500,
@@ -22,17 +22,19 @@ const HorizontalScrollbar = ({ data }) => {
         draggable: false,
     };
     return (
-        <Slider {...settings}>
-            {data.map((game, index) => (
-                <div key={index}>
-                    <Card
-                        key={index}
-                        data={game}
-                        color={cardColors[index % cardColors.length]}
-                    />
-                </div>
-            ))}
-        </Slider>
+        <div className="lul__horizontalScrollbar">
+            <Slider {...settings}>
+                {data.map((game, index) => (
+                    <div key={index}>
+                        <Card
+                            key={index}
+                            data={game}
+                            color={cardColors[index % cardColors.length]}
+                        />
+                    </div>
+                ))}
+            </Slider>
+        </div>
     );
 };
 

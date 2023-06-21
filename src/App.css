@@ -5,6 +5,16 @@
     scroll-behavior: smooth;
 }
 
+.react-horizontal-scrolling-menu--wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
 body {
     background-color: var(--background-color);
     font-size: 1rem;
@@ -56,6 +66,16 @@ h4 {
 .app__body {
     display: flex;
     flex-direction: row;
+}
+
+.lul__home-container {
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+}
+.lul__searchResults {
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
 }
 
 /**

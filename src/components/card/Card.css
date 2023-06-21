@@ -1,0 +1,36 @@
+.lul__card {
+    width: 250px;
+    margin: 20px;
+    border-radius: 20px;
+}
+.lul__card-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lul__card-info {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px 20px 10px;
+}
+
+.lul__card-image img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.lul__card-info > .lul__glassButton {
+    margin: 0 auto;
+}
+
+.lul__card-info__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    text-align: center;
+}

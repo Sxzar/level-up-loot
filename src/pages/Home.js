@@ -3,7 +3,7 @@ import { FreeGames, GameDeals, Hero, News } from "../containers";
 
 const Home = () => {
     return (
-        <div className="full-width">
+        <div className="lul__home-container full-width">
             <Hero />
             <FreeGames />
             <GameDeals />

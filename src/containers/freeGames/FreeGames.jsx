@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { HorizontalScrollbar } from "../../components";
 import { fetchData, freeGamesOptions } from "../../utils/fetchData";
 import "./FreeGames.css";
@@ -22,7 +23,15 @@ const FreeGames = () => {
     }, []);
 
     return (
-        <div className="lul__scrollMenu">
+        <div className="lul__freeGames">
+            <Link to="/freeGames">
+                <h2>🎮Free Games</h2>
+            </Link>
+            <p>
+                Look no further, because right here is where you'll discover an
+                incredible collection <br /> of free games that will keep you
+                entertained for hours on end.
+            </p>
             <HorizontalScrollbar data={freeGames} />
         </div>
     );

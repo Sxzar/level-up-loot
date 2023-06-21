@@ -1,6 +1,16 @@
-.lul__freeGamesSlider {
+.lul__freeGames {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
+    text-align: center;
+}
+
+.lul__freeGames > a > h2 {
+    color: var(--secondary-text-color);
+}
+.lul__freeGames > p {
+    font-weight: 700;
+    color: var(--secondary-text-color);
+    margin: 20px;
 }

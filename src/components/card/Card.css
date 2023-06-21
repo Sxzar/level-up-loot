@@ -35,3 +35,6 @@
     color: var(--primary-text-color);
     text-align: center;
 }
+.lul__card-info__button {
+    position: relative;
+}

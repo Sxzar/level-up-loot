@@ -1,12 +1,12 @@
-import React from 'react'
-import './CardTag.css'
+import React from "react";
+import "./CardTag.css";
 
-const CardTag = (props) => {
-  return (
-    <div className='lul__tag'>
-        <div className='lul__tag-inner'>{props.title}</div>
-    </div>
-  )
-}
+const CardTag = ({ title }) => {
+    return (
+        <div className="lul__tag">
+            <div className="lul__tag-inner">{title}</div>
+        </div>
+    );
+};
 
-export default CardTag
+export default CardTag;

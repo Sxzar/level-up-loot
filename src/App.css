@@ -76,6 +76,7 @@ h4 {
     display: flex;
     flex-wrap: wrap;
     height: fit-content;
+    justify-content: center;
 }
 
 /**

@@ -47,6 +47,15 @@ const SearchResults = () => {
 
     return (
         <div className="lul__home-container full-width">
+            <h2
+                style={{
+                    color: "#34257b",
+                    textAlign: "center",
+                    padding: "30px",
+                }}
+            >
+                🔎Search results for <em>"{search}"</em>
+            </h2>
             <div className="lul__searchResults  ">
                 {games.map((game, index) => (
                     <Card

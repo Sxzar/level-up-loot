@@ -7,9 +7,6 @@ import "./HorizontalScrollbar.css";
 // import RightArrowIcon from "../../assets/img/right-arrow.svg";
 
 const HorizontalScrollbar = ({ data }) => {
-    const numberOfCards = 10;
-    const freeGamesCards = data.slice(0, numberOfCards);
-
     // Set the background color for each card
     const cardColors = ["#F35826", "#877BF5", "#66C8FF", "#FFBE10"];
 
@@ -26,7 +23,7 @@ const HorizontalScrollbar = ({ data }) => {
     };
     return (
         <Slider {...settings}>
-            {freeGamesCards.map((game, index) => (
+            {data.map((game, index) => (
                 <div key={index}>
                     <Card
                         key={index}

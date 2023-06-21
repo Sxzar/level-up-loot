@@ -1,8 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { HorizontalScrollbar } from "../../components";
+import { fetchData, gameDealsOptions } from "../../utils/fetchData";
 import "./GameDeals.css";
 
 const GameDeals = () => {
-    return <div>GameDeals</div>;
+    const [gameDeals, setGameDeals] = React.useState([]);
+
+    useEffect(() => {
+        const fetchFreeGamesData = async () => {
+            try {
+                const response = await fetchData(
+                    "https://cheapshark-game-deals.p.rapidapi.com/deals?pageSize=10",
+                    gameDealsOptions
+                );
+                setGameDeals(response);
+            } catch (error) {
+                console.log("Error fetching data: ", error);
+            }
+        };
+        fetchFreeGamesData();
+    }, []);
+
+    return (
+        <div className="lul__gameDeals">
+            <Link to="/deals">
+                <h2>🤑 Game Deals</h2>
+            </Link>
+            <p>
+                Get ready to level up your gaming experience with some exciting
+                deals on the <br />
+                latest releases.
+            </p>
+            <HorizontalScrollbar data={gameDeals} />
+        </div>
+    );
 };
 
 export default GameDeals;

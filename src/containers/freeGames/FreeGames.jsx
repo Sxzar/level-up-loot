@@ -6,6 +6,7 @@ import "./FreeGames.css";
 
 const FreeGames = () => {
     const [freeGames, setFreeGames] = useState([]);
+    const numberOfCards = 10;
 
     useEffect(() => {
         const fetchFreeGamesData = async () => {
@@ -14,7 +15,7 @@ const FreeGames = () => {
                     "https://free-to-play-games-database.p.rapidapi.com/api/games",
                     freeGamesOptions
                 );
-                setFreeGames(response);
+                setFreeGames(response.slice(0, numberOfCards));
             } catch (error) {
                 console.log("Error fetching data: ", error);
             }

@@ -12,9 +12,10 @@ const NewsSlider = ({ news }) => {
         slidesToShow: 1,
         slidesToScroll: 1,
         initialSlide: 0,
-        lazyLoad: true,
-        draggable: false,
+        lazyLoad: false,
+        draggable: true,
         autoplay: true,
+        
     };
     return (
         <div className="lul__newsSlider">

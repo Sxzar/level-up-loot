@@ -18,8 +18,67 @@ const HorizontalScrollbar = ({ data }) => {
         slidesToShow: 5,
         slidesToScroll: 1,
         initialSlide: 0,
-        lazyLoad: true,
-        draggable: false,
+        lazyLoad: false,
+        draggable: true,
+        swipeToSlide: true,
+        swipe: true,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 1650,
+                settings: {
+                    slidesToShow: 4,
+                }
+            },
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1080,
+                settings: {
+                    slidesToShow: 2.5,
+                }
+            }, 
+            {
+                breakpoint: 940,
+                settings: {
+                    slidesToShow: 2,
+                }
+            }, 
+            {  
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 1.5,
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2.5,
+                }
+            }, 
+            {
+                breakpoint: 715,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1.25,
+                }
+            },
+            {
+                breakpoint: 415,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     };
     return (
         <div className="lul__horizontalScrollbar">

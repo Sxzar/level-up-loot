@@ -1,52 +1,67 @@
+.lul__horizontalScrollbar {
+	padding: 0 30px;
+}
 .slick-track {
-    display: flex;
+	display: flex;
 }
 .slick-slider {
-    overflow-y: hidden;
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+	position: relative;
 }
 .slick-list {
-    width: 90%;
-    overflow-y: hidden;
+	width: 90%;
+	overflow-y: hidden;
 }
 .slick-prev,
 .slick-next {
-    visibility: hidden;
-    position: relative;
+	width: 50px;
+	height: 50px;
+	visibility: hidden;
+	position: absolute;
+}
+.slick-next {
+	top: 50%;
+	right: 0;
+	transform: translate(0, -50%);
+}
+.slick-prev {
+	top: 50%;
+	left: 0;
+	transform: translate(0, -50%);
 }
 
 .slick-prev::after,
 .slick-next::after {
-    content: "";
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: var(--box-shadow);
-    background-position: center;
-    background-repeat: no-repeat;
-    visibility: visible;
-    cursor: pointer;
+	content: "";
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: white;
+	border-radius: 25px;
+	box-shadow: var(--box-shadow);
+	background-position: center;
+	background-repeat: no-repeat;
+	visibility: visible;
+	cursor: pointer;
 }
 .slick-prev::after {
-    background-image: url("/src/assets/img/left-arrow.svg");
+	background-image: url("/src/assets/img/left-arrow.svg");
 }
 .slick-next::after {
-    background-image: url("/src/assets/img/right-arrow.svg");
+	background-image: url("/src/assets/img/right-arrow.svg");
 }
 .slick-prev:hover::after,
 .slick-next:hover::after {
-    background-color: var(--secondary-text-color);
+	background-color: var(--secondary-text-color);
 }
 
 .slick-prev:hover::after {
-    background-image: url("/src/assets/img/left-arrow-active.svg");
+	background-image: url("/src/assets/img/left-arrow-active.svg");
 }
 .slick-next:hover::after {
-    background-image: url("/src/assets/img/right-arrow-active.svg");
+	background-image: url("/src/assets/img/right-arrow-active.svg");
 }

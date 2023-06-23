@@ -19,7 +19,7 @@ const Card = ({ data, color }) => {
 				<Link
 					to={
 						game.dealID
-							? `/game/${game.dealID}`
+							? `/game/deal=${game.gameID}`
 							: `/game/${game.id}`
 					}
 					className="lul__card-info__button"
@@ -43,7 +43,7 @@ const Card = ({ data, color }) => {
 					<GlassButton
 						action={
 							game.dealID
-								? `/game/${game.dealID}`
+								? `/game/deal=${game.gameID}`
 								: `/game/${game.id}`
 						}
 						content={

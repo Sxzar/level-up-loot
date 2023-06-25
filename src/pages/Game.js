@@ -7,6 +7,8 @@ import {
 	youtubeOptions,
 } from "../utils/fetchData";
 
+import { GameContainer } from "../containers";
+
 const Game = (game) => {
 	const { id } = useParams();
 	const [gameDetail, setGameDetail] = useState({});
@@ -50,7 +52,11 @@ const Game = (game) => {
 		fetchGameData();
 	}, [id]);
 
-	return <div>Game</div>;
+	return (
+		<div>
+			<GameContainer game={gameDetail} />
+		</div>
+	);
 };
 
 export default Game;

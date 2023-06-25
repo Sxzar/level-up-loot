@@ -1,0 +1,53 @@
+.lul__paginationContainer-navigation {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.lul__paginationContainer-navigation li {
+	padding: 10px 15px;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.lul__paginationContainer-navigation li.active {
+	background-color: var(--secondary-text-color);
+	color: var(--primary-text-color);
+	border-radius: 5px;
+}
+
+.lul__paginationContainer-items {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.lul__paginationContainer-navigation--next,
+.lul__paginationContainer-navigation--prev {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.lul__paginationContainer-navigation--next button,
+.lul__paginationContainer-navigation--prev button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	font-weight: 700;
+	content: "";
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	width: 20px;
+	height: 20px;
+}
+
+.lul__paginationContainer-navigation--next button {
+	background-image: url("/src/assets/img/chevron-right-solid.svg");
+}
+
+.lul__paginationContainer-navigation--prev button {
+	background-image: url("/src/assets/img/chevron-left-solid.svg");
+}

@@ -20,15 +20,15 @@
 	border-radius: 20px 0 0 20px;
 }
 .lul__gameContainer-image img {
-	height: 50vw;
-	width: 50vw;
+	height: 100vw;
+	width: 100%;
 	max-width: 700px;
 	max-height: 700px;
 	object-fit: cover;
-	border-radius: 50%;
+	border-radius: 20px 50% 50% 20px;
 	position: absolute;
 	top: 50%;
-	left: -30%;
+	left: 0;
 	transform: translate(0, -50%);
 	box-shadow: var(--box-shadow);
 }
@@ -43,6 +43,8 @@
 }
 
 .lul__gameContainer-gameDetails {
+	position: relative;
+	z-index: 2;
 	width: 65%;
 	color: var(--secondary-text-color);
 }

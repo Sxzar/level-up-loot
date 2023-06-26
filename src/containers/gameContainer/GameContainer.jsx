@@ -1,7 +1,9 @@
 import React from "react";
+import { Loader } from "../../components";
 import "./GameContainer.css";
 
 const GameContainer = ({ game }) => {
+	if (!game) return <Loader />;
 	return (
 		<div className="lul__gameContainer">
 			<div className="lul__gameContainer-image">
@@ -12,6 +14,7 @@ const GameContainer = ({ game }) => {
 							: game.thumbnail
 					}
 					alt={game.title}
+					loading="lazy"
 				/>
 			</div>
 			<div className="lul__gameContainer-gameDetails section__padding">

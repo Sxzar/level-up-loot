@@ -7,3 +7,4 @@ export { default as ScreenContainer } from "./screenContainer/ScreenContainer";
 export { default as SideNav } from "./sideNav/SideNav";
 export { default as Subscribe } from "./subscribe/Subscribe";
 export { default as TopNav } from "./topNav/TopNav";
+export { default as VideoContainer } from "./videoContainer/VideoContainer";

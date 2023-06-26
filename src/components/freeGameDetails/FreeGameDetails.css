@@ -1,0 +1,21 @@
+.lul__freeGameDetails-top {
+	display: flex;
+	align-items: center;
+	margin: 1rem 0;
+	font-weight: 700;
+}
+.lul__freeGameDetails-top p {
+	margin-right: 1rem;
+}
+
+.lul__freeGameDetails {
+	position: relative;
+	z-index: 2;
+	width: 65%;
+	color: var(--secondary-text-color);
+}
+
+.lul__freeGameDetails-requirements,
+.lul__freeGameDetails-requirements h4 {
+	margin: 1rem 0;
+}

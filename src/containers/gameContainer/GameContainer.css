@@ -32,27 +32,6 @@
 	transform: translate(0, -50%);
 	box-shadow: var(--box-shadow);
 }
-.lul__gameContainer-gameDetails__top {
-	display: flex;
-	align-items: center;
-	margin: 1rem 0;
-	font-weight: 700;
-}
-.lul__gameContainer-gameDetails__top p {
-	margin-right: 1rem;
-}
-
-.lul__gameContainer-gameDetails {
-	position: relative;
-	z-index: 2;
-	width: 65%;
-	color: var(--secondary-text-color);
-}
-
-.lul__gameContainer-gameDetails__requirements,
-.lul__gameContainer-gameDetails__requirements h4 {
-	margin: 1rem 0;
-}
 
 .lul__decoration1 {
 	width: 140px;

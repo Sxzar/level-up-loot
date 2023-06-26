@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { GameContainer, VideoContainer } from "../containers";
 import {
 	fetchData,
 	freeGamesOptions,
 	gameDealsOptions,
 	youtubeOptions,
 } from "../utils/fetchData";
-
-import { GameContainer } from "../containers";
 
 const Game = (game) => {
 	const { id } = useParams();
@@ -31,7 +30,6 @@ const Game = (game) => {
 					freeGamesOptions
 				);
 				setGameDetail(gameResponse);
-				console.log("Free Game: ", gameResponse);
 			} else {
 				let gameId = id.replace("deal=", "");
 				gameResponse = await fetchData(
@@ -39,22 +37,29 @@ const Game = (game) => {
 					gameDealsOptions
 				);
 				setGameDetail(gameResponse);
-				console.log("Game Deal: ", gameResponse);
 			}
 
-			const videoResponse = await fetchData(
-				`${gameVideoUrl}/search?query=${gameResponse.title}`,
-				youtubeOptions
-			);
-			setGameVideo(videoResponse);
-			console.log("Video: ", videoResponse);
+			if (gameResponse.title) {
+				const videoResponse = await fetchData(
+					`${gameVideoUrl}/search?query=${gameResponse.title}`,
+					youtubeOptions
+				);
+				setGameVideo(videoResponse);
+			} else {
+				const videoResponse = await fetchData(
+					`${gameVideoUrl}/search?query=${gameResponse.info.title}`,
+					youtubeOptions
+				);
+				setGameVideo(videoResponse);
+			}
 		};
 		fetchGameData();
 	}, [id]);
 
 	return (
-		<div>
+		<div className="lul__home-container full-width">
 			<GameContainer game={gameDetail} />
+			<VideoContainer videos={gameVideo} />
 		</div>
 	);
 };

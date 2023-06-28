@@ -1,6 +1,8 @@
 export { default as Card } from "./card/Card";
 export { default as CardTag } from "./cardTag/CardTag";
 export { default as Cta } from "./cta/Cta";
+export { default as FreeGameDetails } from "./freeGameDetails/FreeGameDetails";
+export { default as GameDealDetails } from "./gameDealDetails/GameDealDetails";
 export { default as GlassButton } from "./glassButton/GlassButton";
 export { default as HeroBanner } from "./heroBanner/HeroBanner";
 export { default as HeroGame } from "./heroGame/HeroGame";

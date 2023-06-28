@@ -1,0 +1,45 @@
+.lul__gameDealDetails {
+	position: relative;
+	z-index: 2;
+	width: 65%;
+	color: var(--secondary-text-color);
+	text-align: center;
+}
+.lul__gameDealDetails-deals {
+	width: 50%;
+	margin: 0 auto;
+	height: 300px;
+	overflow-y: scroll;
+	position: relative;
+	margin-top: 1rem;
+}
+.lul__gameDealDetails-deals__deal {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 1rem 0;
+	padding: 1rem;
+	background-color: var(--background-color);
+	border-radius: 10px;
+	font-weight: 700;
+}
+
+.lul__gameDealDetails-deals__provider {
+	width: 150px;
+	text-align: left;
+	display: flex;
+	align-items: center;
+}
+.lul__gameDealDetails-deals__provider img {
+	margin-right: 0.5rem;
+}
+.lul__gameDealDetails-deals__deal a {
+	background-color: var(--background-color-nav);
+	padding: 5px 15px;
+	border-radius: 20px;
+	color: var(--secondary-text-color);
+	box-shadow: var(--box-shadow);
+}
+.lul__gameDealDetails-scrollAnimation {
+	margin-top: 1rem;
+}

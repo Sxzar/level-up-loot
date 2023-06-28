@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { GameContainer, VideoContainer } from "../containers";
 import {
 	fetchData,
 	freeGamesOptions,
 	gameDealsOptions,
-	youtubeOptions,
 } from "../utils/fetchData";
 
 const Game = (game) => {
 	const { id } = useParams();
 	const [gameDetail, setGameDetail] = useState({});
-	const [gameVideo, setGameVideo] = useState({});
 
 	useEffect(() => {
 		const fetchGameData = async () => {
@@ -18,8 +17,6 @@ const Game = (game) => {
 				"https://free-to-play-games-database.p.rapidapi.com/api";
 			const gameDealsUrl =
 				"https://cheapshark-game-deals.p.rapidapi.com/games";
-			const gameVideoUrl =
-				"https://youtube-search-and-download.p.rapidapi.com";
 
 			let gameResponse;
 
@@ -29,7 +26,6 @@ const Game = (game) => {
 					freeGamesOptions
 				);
 				setGameDetail(gameResponse);
-				console.log("Free Game: ", gameResponse);
 			} else {
 				let gameId = id.replace("deal=", "");
 				gameResponse = await fetchData(
@@ -37,20 +33,17 @@ const Game = (game) => {
 					gameDealsOptions
 				);
 				setGameDetail(gameResponse);
-				console.log("Game Deal: ", gameResponse);
 			}
-
-			const videoResponse = await fetchData(
-				`${gameVideoUrl}/search?query=${gameResponse.title}`,
-				youtubeOptions
-			);
-			setGameVideo(videoResponse);
-			console.log("Video: ", videoResponse);
 		};
 		fetchGameData();
 	}, [id]);
 
-	return <div>Game</div>;
+	return (
+		<div className="lul__home-container full-width">
+			<GameContainer game={gameDetail} />
+			<VideoContainer game={gameDetail} />
+		</div>
+	);
 };
 
 export default Game;

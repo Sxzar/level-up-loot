@@ -73,3 +73,14 @@
 	border-radius: 50%;
 	box-shadow: var(--box-shadow);
 }
+
+.lul__freeGameDetails-description {
+	max-height: 150px;
+	overflow-y: scroll;
+}
+
+@media screen and (max-width: 1650px) {
+	.lul__gameDealDetails-deals {
+		width: 80%;
+	}
+}

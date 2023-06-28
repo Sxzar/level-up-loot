@@ -5,13 +5,11 @@ import {
 	fetchData,
 	freeGamesOptions,
 	gameDealsOptions,
-	youtubeOptions,
 } from "../utils/fetchData";
 
 const Game = (game) => {
 	const { id } = useParams();
 	const [gameDetail, setGameDetail] = useState({});
-	const [gameVideo, setGameVideo] = useState({});
 
 	useEffect(() => {
 		const fetchGameData = async () => {
@@ -19,8 +17,6 @@ const Game = (game) => {
 				"https://free-to-play-games-database.p.rapidapi.com/api";
 			const gameDealsUrl =
 				"https://cheapshark-game-deals.p.rapidapi.com/games";
-			const gameVideoUrl =
-				"https://youtube-search-and-download.p.rapidapi.com";
 
 			let gameResponse;
 
@@ -38,20 +34,6 @@ const Game = (game) => {
 				);
 				setGameDetail(gameResponse);
 			}
-
-			if (gameResponse.title) {
-				const videoResponse = await fetchData(
-					`${gameVideoUrl}/search?query=${gameResponse.title}`,
-					youtubeOptions
-				);
-				setGameVideo(videoResponse);
-			} else {
-				const videoResponse = await fetchData(
-					`${gameVideoUrl}/search?query=${gameResponse.info.title}`,
-					youtubeOptions
-				);
-				setGameVideo(videoResponse);
-			}
 		};
 		fetchGameData();
 	}, [id]);
@@ -59,7 +41,7 @@ const Game = (game) => {
 	return (
 		<div className="lul__home-container full-width">
 			<GameContainer game={gameDetail} />
-			<VideoContainer videos={gameVideo} />
+			<VideoContainer game={gameDetail} />
 		</div>
 	);
 };

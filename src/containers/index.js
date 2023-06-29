@@ -2,6 +2,7 @@ export { default as FreeGames } from "./freeGames/FreeGames";
 export { default as GameContainer } from "./gameContainer/GameContainer";
 export { default as GameDeals } from "./gameDeals/GameDeals";
 export { default as Hero } from "./hero/Hero";
+export { default as Modal } from "./modal/Modal";
 export { default as News } from "./news/News";
 export { default as ScreenContainer } from "./screenContainer/ScreenContainer";
 export { default as SideNav } from "./sideNav/SideNav";

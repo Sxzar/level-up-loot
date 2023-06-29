@@ -15,3 +15,4 @@ export { default as NewsArticle } from "./newsArticle/NewsArticle";
 export { default as NewsSlider } from "./newsSlider/NewsSlider";
 export { default as Pagination } from "./pagination/Pagination";
 export { default as Search } from "./search/Search";
+export { default as SubscriptionForm } from "./subscriptionForm/SubscriptionForm";

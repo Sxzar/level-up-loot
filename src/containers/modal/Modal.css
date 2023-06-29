@@ -1,0 +1,27 @@
+.lul__modal {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 999;
+}
+.lul__modal-content {
+	width: 500px;
+	background-color: var(--background-color-nav);
+	border-radius: 20px;
+}
+.lul__modal-content__header,
+.lul__modal-content__footer,
+.lul__modal-content__body {
+	padding: 10px;
+}
+
+.lul__modal-content__body {
+	border-top: 1px solid #877bf5;
+	border-bottom: 1px solid #877bf5;
+}

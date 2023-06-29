@@ -5,7 +5,6 @@ import { bingNewsOptions, fetchData } from "../utils/fetchData";
 
 const GamingNews = () => {
 	const [bingNews, setBingNews] = useState([]);
-	const cardColors = ["#F35826", "#877BF5", "#66C8FF", "#FFBE10"];
 	useEffect(() => {
 		const fetchNewsData = async () => {
 			try {
@@ -26,10 +25,15 @@ const GamingNews = () => {
 				<Link to="/gaming-news">📰News </Link>
 			</h2>
 			<p style={{ padding: "1rem" }}>
-			All the latest gaming news from around the world. Everything you could ever want to <br />
-watch or read about gaming all in one place.
+				All the latest gaming news from around the world. Everything you
+				could ever want to <br />
+				watch or read about gaming all in one place.
 			</p>
-			<Pagination totalItems={bingNews.length} itemsPerPage={20} data={bingNews} />
+			<Pagination
+				totalItems={bingNews.length}
+				itemsPerPage={20}
+				data={bingNews}
+			/>
 		</div>
 	);
 };

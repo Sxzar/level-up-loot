@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Loader, NewsArticle } from "../";
+import { Card, NewsArticle } from "../";
 import "./Pagination.css";
 
 const Pagination = ({ totalItems, itemsPerPage, data }) => {
@@ -78,24 +78,21 @@ const Pagination = ({ totalItems, itemsPerPage, data }) => {
 	return (
 		<div className="lul__paginationConatiner">
 			<div className="lul__paginationContainer-items">
-				{ locationPage === '/gaming-news' ? (
-					currentItems.map((news, index) => (
-						<NewsArticle
-							key={index}
-							article={news}
-							color={cardColors[index % cardColors.length]}
-						/>
-					))
-				) : (
-					currentItems.map((game, index) => (
-						<Card
-							key={index}
-							data={game}
-							color={cardColors[index % cardColors.length]}
-						/>
-					))
-				)}
-				
+				{locationPage === "/gaming-news"
+					? currentItems.map((news, index) => (
+							<NewsArticle
+								key={index}
+								article={news}
+								color={cardColors[index % cardColors.length]}
+							/>
+					  ))
+					: currentItems.map((game, index) => (
+							<Card
+								key={index}
+								data={game}
+								color={cardColors[index % cardColors.length]}
+							/>
+					  ))}
 			</div>
 			<ul className="lul__paginationContainer-navigation">
 				<li className="lul__paginationContainer-navigation--prev">

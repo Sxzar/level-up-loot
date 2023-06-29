@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Loader, Pagination } from "../components/";
+import { Pagination } from "../components/";
 import { fetchData, freeGamesOptions } from "../utils/fetchData";
 
 const Free = () => {

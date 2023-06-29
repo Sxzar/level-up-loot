@@ -11,6 +11,7 @@ export { default as HorizontalScrollbar } from "./horizontalScrollbar/Horizontal
 export { default as Loader } from "./loader/Loader";
 export { default as MobileMenu } from "./mobileMenu/MobileMenu";
 export { default as NavLinks } from "./navLinks/NavLinks";
+export { default as NewsArticle } from "./newsArticle/NewsArticle";
 export { default as NewsSlider } from "./newsSlider/NewsSlider";
 export { default as Pagination } from "./pagination/Pagination";
 export { default as Search } from "./search/Search";

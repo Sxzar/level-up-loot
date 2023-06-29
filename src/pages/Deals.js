@@ -23,7 +23,7 @@ const Deals = () => {
 
 	if (!gameDeals) return <Loader />;
 	return (
-		<div className="lul__home-container lul__page section__padding">
+		<div className="lul__home-container lul__page section__padding full-width">
 			<h2>
 				<Link to="/freeGames">🤑 Game Deals </Link>
 			</h2>

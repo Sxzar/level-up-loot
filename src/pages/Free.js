@@ -20,10 +20,8 @@ const Free = () => {
 		};
 		fetchFreeGamesData();
 	}, []);
-
-	if (!freeGames) return <Loader />;
 	return (
-		<div className="lul__home-container lul__page section__padding">
+		<div className="lul__home-container lul__page section__padding full-width">
 			<h2>
 				<Link to="/freeGames">🎮Free Games </Link>
 			</h2>
@@ -32,6 +30,7 @@ const Free = () => {
 				incredible collection <br /> of free games that will keep you
 				entertained for hours on end.
 			</p>
+
 			<Pagination
 				totalItems={freeGames.length}
 				itemsPerPage={20}

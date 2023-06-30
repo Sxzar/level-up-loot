@@ -15,7 +15,7 @@ const Cta = ({ title, action }) => {
 					<Modal
 						show={show}
 						onClose={() => setShow(false)}
-						title={title}
+						title="Don't miss out!"
 						children={<SubscriptionForm />}
 					/>
 				</div>

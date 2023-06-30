@@ -1,4 +1,5 @@
 import React from "react";
+import SubscribeBanner from "../../assets/img/subscribe-banner.jpg";
 import "./Modal.css";
 
 const Modal = ({ show, onClose, title, children }) => {
@@ -11,11 +12,10 @@ const Modal = ({ show, onClose, title, children }) => {
 				onClick={(e) => e.stopPropagation()}
 			>
 				<div className="lul__modal-content__header">
-					<h4>{title}</h4>
-					<span onClick={onClose}>Close</span>
+					<img src={SubscribeBanner} alt={title} />
+					<span className="lul__modal-close" onClick={onClose}></span>
 				</div>
 				<div className="lul__modal-content__body">{children}</div>
-				<div className="lul__modal-content__footer">footer</div>
 			</div>
 		</div>
 	);

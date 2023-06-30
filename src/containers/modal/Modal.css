@@ -10,18 +10,82 @@
 	justify-content: center;
 	z-index: 999;
 }
+
+.lul__modal-content__header img {
+	border-radius: 20px 20px 0 0;
+	width: 100%;
+	height: 240px;
+	object-fit: cover;
+}
+
+.lul__modal-content__header {
+	position: relative;
+}
+.lul__modal-close {
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.lul__modal-close::after {
+	content: "\2715";
+	font-size: 2rem;
+	color: #fff;
+	font-weight: 700;
+}
+
+.lul__modal-content__header {
+	height: 200px;
+	overflow: hidden;
+}
+
 .lul__modal-content {
-	width: 500px;
+	width: 100%;
+	max-width: 500px;
 	background-color: var(--background-color-nav);
 	border-radius: 20px;
 }
-.lul__modal-content__header,
+
 .lul__modal-content__footer,
 .lul__modal-content__body {
 	padding: 10px;
 }
 
+.lul__modal-content__body p {
+	color: var(--secondary-text-color);
+	font-weight: 700;
+	text-align: center;
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+.lul__modal-content__body input {
+	width: 100%;
+	padding: 0.8rem 1.2rem;
+	border-radius: 20px;
+	border: 1px solid #f6f6f6;
+	box-shadow: var(--box-shadow);
+	margin: 1rem 0;
+	color: var(--secondary-text-color);
+	font-weight: 700;
+	height: 50px;
+}
+
+.lul__modal-content__body input::placeholder {
+	color: var(--secondary-text-color);
+	font-weight: 700;
+}
+
+.lul__modal-content__body input:focus {
+	outline: none;
+	border: 2px solid var(--bakground-color-1);
+}
+.lul__modal-content__body button {
+	margin: 0 auto 1rem auto;
+}
+
 .lul__modal-content__body {
 	border-top: 1px solid #877bf5;
-	border-bottom: 1px solid #877bf5;
 }

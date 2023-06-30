@@ -1,11 +1,19 @@
 import React from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
-const url =
-	"https://gmail.us21.list-manage.com/subscribe/post?u=6be3ccd7bc125870c5180d45a&amp;id=03f679fcc9&amp;f_id=00d55ee1f0";
+const url = process.env.REACT_APP_MAILCHIMP_URL;
 
 const SubscriptionForm = () => {
-	<MailchimpSubscribe url={url} />;
+	return (
+		<div>
+			<p>
+				Unlock cheap games, free giveaways, and gaming news! Sign up now
+				to stay ahead and never miss incredible deals, hidden gems, and
+				industry updates. Join today!
+			</p>
+			<MailchimpSubscribe url={url} />
+		</div>
+	);
 };
 
 export default SubscriptionForm;

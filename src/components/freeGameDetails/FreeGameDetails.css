@@ -19,3 +19,16 @@
 .lul__freeGameDetails-requirements h4 {
 	margin: 1rem 0;
 }
+
+.sticky-button {
+	position: fixed;
+	background-color: var(--bakground-color-1);
+	padding: 1rem 2rem;
+	color: var(--primary-text-color);
+	border-radius: 20px;
+	bottom: 20px;
+	left: 50%;
+	box-shadow: var(--box-shadow);
+	font-weight: 700;
+	transform: translate(-50%, 0);
+}

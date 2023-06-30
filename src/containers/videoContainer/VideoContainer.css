@@ -8,6 +8,8 @@
 .lul__videoContainer-video {
 	padding: 1rem;
 	max-width: 450px;
+	padding-bottom: 20px;
+	height: 100%;
 }
 .lul__videoContainer-video__thumb {
 	width: 100%;
@@ -71,4 +73,24 @@
 
 .play-button:hover::before {
 	border-color: transparent transparent transparent var(--bakground-color-1);
+}
+
+@media screen and (max-width: 1200px) {
+	.lul__videoContainer-video {
+		max-width: 400px;
+	}
+}
+@media screen and (max-width: 1090px) {
+	.lul__videoContainer-video {
+		max-width: 350px;
+	}
+}
+
+@media screen and (max-width: 975px) {
+	.lul__videoContainer-video {
+		max-width: 450px;
+	}
+	.lul__videoContainer {
+		justify-content: center;
+	}
 }

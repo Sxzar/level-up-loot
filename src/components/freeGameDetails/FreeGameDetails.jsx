@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./FreeGameDetails.css";
 
 const FreeGameDetails = ({ game }) => {
@@ -45,6 +46,14 @@ const FreeGameDetails = ({ game }) => {
 			{game.deals ? (
 				<div className="lul__freeGameDetails__deals"></div>
 			) : null}
+			<Link
+				className="sticky-button"
+				to={game.game_url}
+				rel="noreferer noopener"
+				target="_blank"
+			>
+				Play Now
+			</Link>
 		</div>
 	);
 };

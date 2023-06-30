@@ -6,7 +6,6 @@ const Pagination = ({ totalItems, itemsPerPage, data }) => {
 	// Set the colors for the cards
 	const cardColors = ["#F35826", "#877BF5", "#66C8FF", "#FFBE10"];
 	const locationPage = window.location.pathname;
-	console.log(locationPage);
 
 	// Set the current page
 	const [currentPage, setCurrentPage] = useState(1);

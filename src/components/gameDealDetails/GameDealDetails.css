@@ -43,3 +43,22 @@
 .lul__gameDealDetails-scrollAnimation {
 	margin-top: 1rem;
 }
+@media screen and (max-width: 1000px) {
+	.lul__gameDealDetails {
+		width: 100%;
+	}
+	.lul__gameDealDetails-deals {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 500px) {
+	.lul__gameDealDetails-deals__deal {
+		flex-direction: column;
+	}
+	.lul__gameDealDetails-deals__provider {
+		width: auto;
+	}
+	.lul__gameDealDetails-deals__deal p:nth-child(2) {
+		padding: 10px;
+	}
+}

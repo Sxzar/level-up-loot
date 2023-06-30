@@ -6,7 +6,7 @@ import "./Cta.css";
 
 const Cta = ({ title, action }) => {
 	const [show, setShow] = useState(false);
-
+	console.log(action);
 	return (
 		<div className="lul__cta">
 			{action === "modal" ? (

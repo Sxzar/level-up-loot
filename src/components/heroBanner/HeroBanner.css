@@ -1,29 +1,47 @@
 .lul__heroBanner {
-    margin-top: 20px;
-    width: 55%;
-    height: 360px;
-    background-color: var(--bakground-color-1);
-    box-shadow: var(--box-shadow);
-    border-radius: 20px;
-    position: relative;
-    min-width: 768px;
-    display: flex;
-    align-items: center;
+	margin-top: 20px;
+	width: 55%;
+	height: 360px;
+	background-color: var(--bakground-color-1);
+	box-shadow: var(--box-shadow);
+	border-radius: 20px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	min-width: 350px;
 }
 
 .lul__heroBanner-content {
-    width: 62%;
-    min-width: 470px;
-    position: relative;
-    z-index: 2;
-    color: var(--primary-text-color);
-    background: var(--radial-gradient);
-    border-radius: 20px;
-    box-shadow: var(--box-shadow);
+	width: 62%;
+	min-width: 470px;
+	position: relative;
+	z-index: 2;
+	color: var(--primary-text-color);
+	background: var(--radial-gradient);
+	border-radius: 20px;
+	box-shadow: var(--box-shadow);
 }
 
 .lul__heroBanner img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+@media screen and (max-width: 1250px) {
+	.lul__heroBanner-content {
+		min-width: 300px;
+	}
+	.lul__heroBanner-content h1 {
+		font-size: 2rem;
+	}
+	.lul__heroBanner-content h3 {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.lul__heroBanner-content {
+		margin: 0 auto;
+	}
 }

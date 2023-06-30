@@ -9,6 +9,10 @@ Level-Up-Loot offers a range of features tailored to meet the needs of gamers:
 - **Game Deals**: Stay updated with the latest game deals and discounts. Level-Up-Loot provides a dedicated section that showcases the best deals available, helping gamers save money while expanding their game collection.
 - **Gaming News**: Access the latest news, updates, and insights from the gaming industry. Level-Up-Loot keeps gamers informed about upcoming releases, industry trends, and exciting developments, providing a valuable resource for staying connected with the gaming community.
 
+## Figma Design
+
+The Level-Up-Loot website closely follows the meticulously crafted design provided in the Figma file. The Figma design file can be found [here](https://www.figma.com/file/WjDYG9jQkVUC0Og0nQofTC/). By adhering closely to the Figma design, the website ensures a consistent and visually appealing user interface. The design elements, color schemes, typography, and layout are faithfully implemented, providing users with a seamless and immersive experience that matches the original design vision.
+
 ## Dependencies
 
 Level-Up-Loot is built with React, utilizing the following key dependencies:

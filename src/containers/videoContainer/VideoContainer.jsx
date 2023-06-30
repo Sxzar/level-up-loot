@@ -43,54 +43,65 @@ const VideoContainer = ({ game }) => {
 								className="lul__videoContainer-video"
 								key={index}
 							>
-								<div className="lul__videoContainer-video__thumb">
-									<a
-										href={`https://www.youtube.com/watch?v=${video.video.videoId}`}
-										target="_blank"
-										rel="noreferrer noopener"
-									>
-										<img
-											src={
-												video.video.thumbnails[1]
-													? video.video.thumbnails[1]
-															.url
-													: video.video.thumbnails[0]
-															.url
-											}
-											alt={video.video.description}
-										/>
-										<div className="play-button">
-											<p></p>
-										</div>
-										<span>{video.video.lengthText}</span>
-									</a>
-								</div>
-								<div className="lul__videoContainer-video__description">
-									<h4>
+								<div
+									className="lul__videoContainer-video"
+									key={index}
+								>
+									<div className="lul__videoContainer-video__thumb">
 										<a
 											href={`https://www.youtube.com/watch?v=${video.video.videoId}`}
 											target="_blank"
 											rel="noreferrer noopener"
 										>
-											{video.video.title}
+											<img
+												src={
+													video.video.thumbnails[1]
+														? video.video
+																.thumbnails[1]
+																.url
+														: video.video
+																.thumbnails[0]
+																.url
+												}
+												alt={video.video.description}
+											/>
+											<div className="play-button">
+												<p></p>
+											</div>
+											<span>
+												{video.video.lengthText}
+											</span>
 										</a>
-									</h4>
-									<p>
-										<a
-											href={`https://www.youtube.com/channel/${video.video.channelId}`}
-											target="_blank"
-											rel="noreferrer noopener"
-										>
-											{video.video.channelName}
-										</a>
-									</p>
-									<p>
-										{video.video.viewCountText} -{" "}
-										{video.video.publishedTimeText}
-									</p>
+									</div>
+									<div className="lul__videoContainer-video__description">
+										<h4>
+											<a
+												href={`https://www.youtube.com/watch?v=${video.video.videoId}`}
+												target="_blank"
+												rel="noreferrer noopener"
+											>
+												{video.video.title}
+											</a>
+										</h4>
+										<p>
+											<a
+												href={`https://www.youtube.com/channel/${video.video.channelId}`}
+												target="_blank"
+												rel="noreferrer noopener"
+											>
+												{video.video.channelName}
+											</a>
+										</p>
+										<p>
+											{video.video.viewCountText} -{" "}
+											{video.video.publishedTimeText}
+										</p>
+									</div>
 								</div>
 							</div>
 						);
+					} else {
+						return null;
 					}
 				})
 			) : (

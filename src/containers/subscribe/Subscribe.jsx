@@ -20,7 +20,7 @@ const Subscribe = () => {
 					treasure trove of <br /> information, updates, and
 					announcements that will keep you ahead of the curve.
 				</p>
-				<Cta />
+				<Cta title="Subscribe" action="modal" />
 			</div>
 		</div>
 	);

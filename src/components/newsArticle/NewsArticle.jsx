@@ -4,7 +4,6 @@ import Placeholder from "../../assets/img/placeholder.jpg";
 import "./NewsArticle.css";
 
 const NewsArticle = ({ article, color }) => {
-
 	if (!Placeholder) return <Loader />;
 
 	let newImage;
@@ -23,18 +22,19 @@ const NewsArticle = ({ article, color }) => {
 					<img src={newImage} alt={article.name} />
 				</a>
 			</div>
-			<div
-				className="lul__newsArticle-content"
-			>
+			<div className="lul__newsArticle-content">
 				<a href={article.url} target="_blank" rel="noreferrer noopener">
 					<span className="lul__newsArticle-provider">
 						{article.provider[0].name}
 					</span>
 					<h3>{article.name}</h3>
 				</a>
-				
 			</div>
-			<GlassButton content="Read More" action={article.url} external={1}/>
+			<GlassButton
+				content="Read More"
+				action={article.url}
+				external={1}
+			/>
 		</div>
 	);
 };

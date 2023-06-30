@@ -24,7 +24,7 @@ Level-Up-Loot follows a modular approach to maintain a clean and organized codeb
 
 ## Environment Variables
 
-To ensure the security of sensitive information, Level-Up-Loot stores its API key in a `.env` file. By storing the API key separately, the website ensures that confidential data, such as the RapidApi key, is kept private and is not exposed within the codebase. This approach promotes security best practices and protects valuable data from unauthorized access.
+To ensure the security of sensitive information, Level-Up-Loot stores its API key in an `.env` file. By storing the API key separately, the website ensures that confidential data, such as the RapidApi key, is kept private and is not exposed within the codebase. This approach promotes security best practices and protects valuable data from unauthorized access.
 
 **Note**: Before running the application, please set up the `.env` file with the required API key to enable seamless data retrieval from the five different APIs via RapidApi.
 
@@ -39,6 +39,9 @@ Level-Up-Loot is committed to following industry best practices, resulting in ex
 
 ## Additional Information
 
-Level-Up-Loot offers a visually appealing and user-friendly platform for gamers seeking free games, game deals, and gaming news. By consistently providing a broad range of engaging content and maintaining high standards in performance, accessibility, best practices, and SEO, Level-Up-Loot aims to deliver an exceptional user experience. While the website has already achieved impressive results, the team behind Level-Up-Loot remains committed to continuous improvement, ensuring that gamers have access to the best gaming resources and an enjoyable browsing experience.
+Level-Up-Loot offers a visually appealing and user-friendly platform for gamers seeking free games, game deals, and gaming news. With meticulous attention to detail, the CSS and JavaScript used in the project elevate the browsing experience to new heights. The CSS styles are carefully crafted, offering a seamless blend of aesthetics and functionality. The JavaScript code is efficient and well-organized, ensuring smooth interactivity and optimal performance.
+
+By consistently providing a broad range of engaging content and maintaining high standards in performance, accessibility, best practices, and SEO, Level-Up-Loot aims to deliver an exceptional user experience.
+While the website has already achieved impressive results, the developer behind Level-Up-Loot remains committed to continuous improvement.
 
 To explore the Level-Up-Loot website, please visit [https://level-up-loot.sxzar.com/](https://level-up-loot.sxzar.com/). Get ready to level up your gaming experience with Level-Up-Loot!

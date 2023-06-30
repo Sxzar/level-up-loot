@@ -24,8 +24,16 @@ const MobileMenu = () => {
 						: "lul__mobileMenu-navigation"
 				}
 			>
-				<Search />
-				<NavLinks />
+				<Search
+					click={() => {
+						setOpen(!open);
+					}}
+				/>
+				<NavLinks
+					click={() => {
+						setOpen(!open);
+					}}
+				/>
 				<Cta title="Subscribe" action="modal" />
 			</div>
 		</div>

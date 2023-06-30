@@ -30,7 +30,6 @@ const Free = () => {
 				incredible collection <br /> of free games that will keep you
 				entertained for hours on end.
 			</p>
-
 			<Pagination
 				totalItems={freeGames.length}
 				itemsPerPage={20}

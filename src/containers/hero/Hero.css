@@ -5,3 +5,28 @@
 	margin: 0 auto;
 	padding-top: 30px;
 }
+
+@media screen and (min-width: 768px) and (max-width: 880px),
+	screen and (max-width: 680px) {
+	.lul__hero {
+		flex-direction: column;
+		align-items: center;
+	}
+	.lul__heroBanner {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.lul__heroBanner-content {
+		margin: 1rem;
+	}
+	.lul__heroGames {
+		width: 100%;
+		min-width: 350px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.lul__heroBanner-content {
+		margin: 0 auto;
+	}
+}

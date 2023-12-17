@@ -19,13 +19,14 @@ const NewsSlider = ({ news }) => {
 	return (
 		<div className="lul__newsSlider">
 			<Slider {...settings}>
-				{news.map((article, index) => (
-					<HomeNewsArticle
-						key={index}
-						article={article}
-						color={cardColors[index % cardColors.length]}
-					/>
-				))}
+				{news &&
+					news.map((article, index) => (
+						<HomeNewsArticle
+							key={index}
+							article={article}
+							color={cardColors[index % cardColors.length]}
+						/>
+					))}
 			</Slider>
 		</div>
 	);

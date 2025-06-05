@@ -7,32 +7,30 @@ const HeroGame = () => {
     const [game, setGame] = useState([]);
     const [sectionTitle, setSectionTitle] = useState("Coming Soon");
 
-    useEffect(() => {
-        const fetchHeroGamesData = async () => {
-            const endpoint1 =
-                "https://epic-free-games.p.rapidapi.com/epic-free-games";
-            const endpoint2 =
-                "https://epic-free-games.p.rapidapi.com/epic-free-games-coming-soon";
+      useEffect(() => {
+      const fetchHeroGamesData = async () => {
+          const endpoint = "https://epic-games-store-free-games.p.rapidapi.com/free?country=US";
 
-            try {
-                const response1 = await fetchData(endpoint1, epicGamesOptions);
+          try {
+              const response = await fetchData(endpoint, epicGamesOptions);
 
-                if (response1.length > 0) {
-                    setGame(response1);
-                    setSectionTitle("Get it now");
-                } else {
-                    const response2 = await fetchData(
-                        endpoint2,
-                        epicGamesOptions
-                    );
-                    setGame(response2);
-                }
-            } catch (error) {
-                console.log("Error fetching data: ", error);
-            }
-        };
-        fetchHeroGamesData();
-    }, []);
+              if (response && response.currentGames && response.currentGames.length > 0) {
+                  setGame(response.currentGames);
+                  setSectionTitle("Get it now");
+              } else if (response && response.upcomingGames && response.upcomingGames.length > 0) {
+                  setGame(response.upcomingGames);
+                  setSectionTitle("Coming soon");
+              } else {
+                  setSectionTitle("No free games available");
+                  setGame([]);
+              }
+          } catch (error) {
+              console.log("Error fetching data: ", error);
+          }
+      };
+
+      fetchHeroGamesData();
+  }, []);
 
     // Slider for hero games
 
@@ -65,8 +63,8 @@ const HeroGame = () => {
                         rel="noreferrer noopener"
                     >
                         <img
-                            src={game[currentIndex].offerImageWide}
-                            alt={game[currentIndex].name}
+                            src={game[currentIndex].keyImages[0].url}
+                            alt={game[currentIndex].title}
                         />
                         <CardTag title="Free"></CardTag>
                         <div className="lul__heroGame-sectionTitle">

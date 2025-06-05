@@ -1,6 +1,6 @@
 # Level-Up-Loot
 
-[Level-Up-Loot](https://level-up-loot.sxzar.com/) is a vibrant and user-friendly website designed specifically for gamers. It aims to provide gamers with free games, game deals, and the latest gaming news. With its colorful and intuitive design, Level-Up-Loot offers an enjoyable browsing experience for gaming enthusiasts. This readme provides an in-depth overview of the website, its dependencies, file structure, key features, and its commitment to excellence.
+[Level-Up-Loot](https://leveluploot.netlify.app/) is a vibrant and user-friendly website designed specifically for gamers. It aims to provide gamers with free games, game deals, and the latest gaming news. With its colorful and intuitive design, Level-Up-Loot offers an enjoyable browsing experience for gaming enthusiasts. This readme provides an in-depth overview of the website, its dependencies, file structure, key features, and its commitment to excellence.
 
 ## Features
 Level-Up-Loot offers a range of features tailored to meet the needs of gamers:
@@ -48,4 +48,4 @@ Level-Up-Loot offers a visually appealing and user-friendly platform for gamers 
 By consistently providing a broad range of engaging content and maintaining high standards in performance, accessibility, best practices, and SEO, Level-Up-Loot aims to deliver an exceptional user experience.
 While the website has already achieved impressive results, the developer behind Level-Up-Loot remains committed to continuous improvement.
 
-To explore the Level-Up-Loot website, please visit [https://level-up-loot.sxzar.com/](https://level-up-loot.sxzar.com/). Get ready to level up your gaming experience with Level-Up-Loot!
+To explore the Level-Up-Loot website, please visit [https://leveluploot.netlify.app/](https://leveluploot.netlify.app/). Get ready to level up your gaming experience with Level-Up-Loot!

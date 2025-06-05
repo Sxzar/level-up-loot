@@ -99,3 +99,8 @@
 	border-radius: 50%;
 	box-shadow: var(--box-shadow);
 }
+@media screen and (max-width: 500px) {
+.lul__subscribeSection-content {
+  margin-top: 170px;
+}
+}

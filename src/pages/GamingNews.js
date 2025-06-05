@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Pagination } from "../components";
-import { bingNewsOptions, fetchData } from "../utils/fetchData";
+import { epicNewsOptions, fetchData } from "../utils/fetchData";
 
 const GamingNews = () => {
-	const [bingNews, setBingNews] = useState([]);
+	const [epicNews, setEpicNews] = useState([]);
 	useEffect(() => {
-		const fetchNewsData = async () => {
-			try {
-				const response = await fetchData(
-					"https://bing-news-search1.p.rapidapi.com/news/search?q=gaming&freshness=month&cc=US&count=100",
-					bingNewsOptions
-				);
-				setBingNews(response.value);
-			} catch (error) {
-				console.log("Error fetching data: ", error);
-			}
-		};
-		fetchNewsData();
-	}, []);
+  const fetchNewsData = async () => {
+    try {
+      const response = await fetchData(
+        "https://epic-games-store.p.rapidapi.com/getNews/locale/en/limit/30",
+        epicNewsOptions
+      );
+      console.log("News response:", response);
+      setEpicNews(Array.isArray(response) ? response : []);
+    } catch (error) {
+      console.log("Error fetching news: ", error);
+    }
+  };
+  fetchNewsData();
+}, []);
 	return (
 		<div className="lul__home-container lul__page section__padding full-width">
 			<h2>
@@ -29,11 +30,15 @@ const GamingNews = () => {
 				could ever want to <br />
 				watch or read about gaming all in one place.
 			</p>
-			<Pagination
-				totalItems={bingNews.length}
-				itemsPerPage={20}
-				data={bingNews}
-			/>
+			{Array.isArray(epicNews) && epicNews.length > 0 ? (
+  <Pagination
+    totalItems={epicNews.length}
+    itemsPerPage={20}
+    data={epicNews}
+  />
+) : (
+  <p style={{ padding: "1rem" }}>No news available.</p>
+)}
 		</div>
 	);
 };

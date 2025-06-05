@@ -5,38 +5,42 @@ import "./HomeNewsArticle.css";
 
 const HomeNewsArticle = ({ article, color }) => {
 	if (!article) return <Loader />;
-	if (!Placeholder) return <Loader />;
 
-	let newImage;
-	if (article.image) {
-		let image = new URL(article.image.thumbnail.contentUrl);
-		let params = new URLSearchParams(image.search);
-		params.delete("pid");
-		newImage = image.origin + image.pathname + "?" + params.toString();
-	} else {
-		newImage = Placeholder;
-	}
+	// Image logic
+	const imageUrl = article.trendingImage || Placeholder;
+
+	// Title
+	const title = article._title || article.title || "Untitled";
+
+	// Description
+	const description = article.short || "Click to read more...";
+
+	// Link to full article
+	const articleUrl = `https://store.epicgames.com/en-US${article.url || article.urlPattern || ""}`;
+
 	return (
 		<div className="lul__homeNewsArticle">
 			<div className="lul__homeNewsArticle-image">
-				<a href={article.url} target="_blank" rel="noreferrer noopener">
-					<img src={newImage} alt={article.name} />
+				<a href={articleUrl} target="_blank" rel="noreferrer noopener">
+					<img src={imageUrl} alt={title} />
 				</a>
 			</div>
 			<div
 				className="lul__homeNewsArticle-content"
 				style={{ backgroundColor: color }}
 			>
-				<a href={article.url} target="_blank" rel="noreferrer noopener">
-					<span className="lul__homeNewsArticle-provider">
-						{article.provider[0].name}
-					</span>
-					<h3>{article.name}</h3>
+				<a href={articleUrl} target="_blank" rel="noreferrer noopener">
+					{article.author && (
+						<span className="lul__homeNewsArticle-provider">
+							{article.author}
+						</span>
+					)}
+					<h3>{title}</h3>
 					<p className="lul__homeNewsArticle-description">
-						{article.description}
+						{description}
 					</p>
 				</a>
-				<GlassButton content="Read More" action={article.url} />
+				<GlassButton content="Read More" action={articleUrl} />
 			</div>
 		</div>
 	);

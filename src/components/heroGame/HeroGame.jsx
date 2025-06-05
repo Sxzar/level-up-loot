@@ -58,7 +58,7 @@ const HeroGame = () => {
             {game.length ? (
                 <div className="lul__heroGames-game">
                     <a
-                        href={game[currentIndex].appUrl}
+                        href={`https://store.epicgames.com/en-US/p/${game[currentIndex].productSlug}`}
                         target="_blank"
                         rel="noreferrer noopener"
                     >
